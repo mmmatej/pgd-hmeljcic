@@ -76,7 +76,7 @@
     <!--</li>-->
     <!--</ul>-->
     <ul>
-        <li style="background-image: url('https://dvqlxo2m2q99q.cloudfront.net/000_clients/205431/page/w1000-20543114245NaSD.jpg');">
+        <li style="background-image: url('https://scontent-fra3-1.xx.fbcdn.net/v/t35.0-12/15556408_10211281656306715_2023156116_o.jpg?oh=b3b0839eac288d9eaa535f74b0ca138e&oe=58D44C60');">
             <span>16. julij 2016</span>
             <h1>DRŽAVNI PRVAKI 2016!!!</h1>
             <p>Verjetno že veste za veselo novico, katera bo za nas prišla šele čez nekaj časa.</p>
