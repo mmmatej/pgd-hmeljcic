@@ -94,9 +94,11 @@ body {
   }
 }
 
-.navbar-nav {
-  margin-top:7px;
-  margin-bottom: -7px;
+@media (min-width: 768px) {
+  .navbar-nav {
+    margin-top: 7px;
+    margin-bottom: -7px;
+  }
 }
 
 .navbar-nav > li > a:after {
@@ -503,5 +505,5 @@ footer li a:hover {
 }
 
 .inline {
-  display: inline;
+  display: inl;
 }

@@ -35,6 +35,16 @@ class PagesController extends Controller
     }
 
     /**
+     * GET: /vozila-in-tehnika/{sub}
+     * @param $sub
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function getVehiclesAndSystems($sub)
+    {
+        return view('pages.vehicles-and-systems');
+    }
+
+    /**
      * GET: /novice
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */

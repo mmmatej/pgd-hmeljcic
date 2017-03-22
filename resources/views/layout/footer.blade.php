@@ -1,7 +1,10 @@
 <footer class="dark">
     <div class="container">
         <div class="copyright">
-            <span class="pull-left">2016 - PGD Hmeljčič</span>
+            <span class="pull-left">
+                2016 - {{ \Carbon\Carbon::now()->year }} | PGD Hmeljčič<br />
+                <span style="opacity:0.3">Izdelava: <a href="mailto:matej@pankped.si">Matej Gašperič</a></span>
+            </span>
 
             <ul class="list-inline pull-right">
                 <li><a href="https://www.facebook.com/PGD-Hmeljčič-1481928608779856" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>

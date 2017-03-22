@@ -13,6 +13,7 @@
 
 $this->get('/', 'Pages\PagesController@getIndex');
 $this->get('o-drustvu', 'Pages\PagesController@getAboutUs');
+$this->get('vozila-in-tehnika/{sub}', 'Pages\PagesController@getVehiclesAndSystems');
 $this->get('novice', 'Pages\PagesController@getNews');
 $this->get('novice/{slug}', 'Pages\PagesController@getNewsDetails');
 $this->get('clani', 'Pages\PagesController@getMembers');
