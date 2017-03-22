@@ -65,25 +65,6 @@
                     @endif
                 </div>
 
-                @if($news->id)
-                <div class="page-header">
-                    <h2>Galerija</h2>
-                </div>
-
-                <div class="row">
-                    @foreach($news->images as $image)
-                        <div class="col-md-2 text-center">
-                            <img src="{{ $image->getUrl() }}" alt="{{ $image->description }}"
-                                 class="img-responsive img-rounded">
-                        </div>
-                    @endforeach
-                    <a href="#" data-toggle="modal" data-target="#image-modal" class="col-md-2 text-center bg-danger" style="padding:57px">
-                        <span class="fa fa-2x fa-plus"></span><br>
-                        Dodaj
-                    </a>
-                </div>
-                @endif
-
                 <div class="actions text-right">
                     @if(!$news->published)
                     <button type="submit" class="btn btn-default" name="draft">Shrani Osnutek</button>
@@ -94,6 +75,30 @@
                 </div>
 
             </form>
+
+            @if($news->id)
+                <div class="page-header">
+                    <h2>Galerija</h2>
+                </div>
+
+                <div class="row">
+                    @foreach($news->images as $image)
+                        <div class="col-md-2 text-center">
+                            <form style="position:absolute" method="POST" action="/admin/novice/{{ $news->id }}/slike/{{ $image->id }}">
+                                {{ csrf_field() }}
+                                {{ method_field('DELETE') }}
+                                <button class="btn btn-default"><span class="fa fa-trash"></span></button>
+                            </form>
+                            <img src="{{ $image->getUrl() }}" alt="{{ $image->description }}"
+                                 class="img-responsive img-rounded">
+                        </div>
+                    @endforeach
+                    <a href="#" data-toggle="modal" data-target="#image-modal" class="col-md-2 text-center bg-danger" style="padding:57px">
+                        <span class="fa fa-2x fa-plus"></span><br>
+                        Dodaj
+                    </a>
+                </div>
+            @endif
         </div>
     </section>
 
