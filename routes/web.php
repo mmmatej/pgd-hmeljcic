@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'Pages\PagesController@getIndex');
+Route::get('o-drustvu', 'Pages\PagesController@getAboutUs');
+Route::get('novice', 'Pages\PagesController@getNews');
+Route::get('novice/{slug}', 'Pages\PagesController@getNewsDetails');
+Route::get('clani', 'Pages\PagesController@getMembers');
+Route::get('kontakt', 'Pages\PagesController@getContact');
+Route::post('kontakt', 'Pages\PagesController@postContact');

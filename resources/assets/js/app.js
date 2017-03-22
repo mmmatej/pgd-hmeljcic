@@ -1,20 +1,28 @@
+var navbar = $('#main-navbar');
+var widthBreakpointXS = 768;
 
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
+$(window).scroll(function (e) {
+    var top = window.pageYOffset || document.documentElement.scrollTop;
 
-require('./bootstrap');
-
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
-Vue.component('example', require('./components/Example.vue'));
-
-const app = new Vue({
-    el: '#app'
+    if (top > 1) {
+        navbar.addClass('white');
+    } else {
+        if ($(window).width() >= widthBreakpointXS)
+            navbar.removeClass('white');
+    }
 });
+
+var ifBreakpoint = function () {
+    var w = $(window).width();
+    if ($(window).width() < widthBreakpointXS)
+        navbar.addClass('white');
+    else {
+        var top = window.pageYOffset || document.documentElement.scrollTop;
+        if (top == 0) {
+            navbar.removeClass('white');
+        }
+    }
+};
+
+$(window).resize(ifBreakpoint);
+$(function(){ifBreakpoint();});
