@@ -8,6 +8,7 @@ use App\Member;
 use App\News;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Mail;
 
 class PagesController extends Controller
@@ -19,7 +20,9 @@ class PagesController extends Controller
     public function getIndex()
     {
         $data = [
-            'news' => News::getCover()
+            'news' => Cache::rememberForever('coverNews', function () {
+                return News::getCover();
+            })
         ];
 
         return view('pages.home', $data);
@@ -50,6 +53,7 @@ class PagesController extends Controller
      */
     public function getNews()
     {
+//        TODO: caching
         $news = News::orderBy('id', 'desc')->paginate(20);
 
         return view('pages.news', ['news' => $news]);
@@ -63,14 +67,17 @@ class PagesController extends Controller
      */
     public function getNewsDetails($slug)
     {
-        $news = News::where('slug', $slug)
-            ->firstOrFail();
+        $news = Cache::rememberForever('news-' . $slug, function () use ($slug) {
+            return News::with('images')->where('slug', $slug)
+                ->firstOrFail();
+        });
 
-        $newsList = News::with('images')
-            ->where('id', '!=', $news->id)
-            ->orderBy('id', 'desc')
-            ->limit(10)
-            ->get();
+        $newsList = Cache::rememberForever('last10news', function () {
+            return News::with('images')
+                ->orderBy('id', 'desc')
+                ->limit(10)
+                ->get();
+        });
 
         return view('pages.news-details', ['news' => $news, 'newsList' => $newsList]);
     }
@@ -82,7 +89,9 @@ class PagesController extends Controller
     public function getMembers()
     {
         $data = [
-            'members' => Member::all()
+            'members' => Cache::rememberForever('members', function () {
+                return Member::all();
+            })
         ];
 
         return view('pages.members', $data);

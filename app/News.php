@@ -5,6 +5,7 @@ namespace App;
 use App\Scopes\PublishedScope;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Cache;
 
 class News extends Model
 {
@@ -60,5 +61,10 @@ class News extends Model
             ['Januar', 'Februar', 'Marec', 'Maj', 'Junij', 'Julij', 'Avgust', 'Oktober'],
             $this->created_at->format('d. F Y')
         );
+    }
+
+    public function clearCache()
+    {
+        Cache::forget('news-' . $this->slug);
     }
 }

@@ -22,6 +22,8 @@ class NewsImagesController extends Controller
             'image'       => 'required|image|dimensions:min_width=100,min_height=100'
         ]);
 
+        $news = News::findOrFail($newsId);
+        $news->clearCache();
 
         $imgPath = $request->file('image')->store('images/news', 'public');
 
@@ -44,8 +46,12 @@ class NewsImagesController extends Controller
      */
     public function destroy($newsId, $id)
     {
-        if (News::findOrFail($newsId)->images()->count() > 1)
+        $news = News::findOrFail($newsId);
+        if ($news->images()->count() > 1) {
             Image::findOrFail($id)->findOrFail($id)->delete();
+
+            $news->clearCache();
+        }
 
         return response()
             ->redirectTo('/admin/novice/' . $newsId . '/uredi');

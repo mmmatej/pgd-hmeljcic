@@ -5,9 +5,15 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Member;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class MembersController extends Controller
 {
+    public function __construct()
+    {
+        Cache::forget('members');
+    }
+
     /**
      * GET: /admin
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
