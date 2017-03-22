@@ -2,7 +2,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   line-height: 21px;
-  color: #969696;
+  color: #525252;
   font-weight: 400;
   background-color: #f5f5f5;
 
@@ -54,7 +54,7 @@ body {
 
     #navbar li a {
       color: #000;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      //border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
       text-shadow: none;
     }
@@ -92,6 +92,11 @@ body {
       outline: 0 !important;
     }
   }
+}
+
+.navbar-nav {
+  margin-top:7px;
+  margin-bottom: -7px;
 }
 
 .navbar-nav > li > a:after {
@@ -231,6 +236,7 @@ body {
 .mediabody {
   overflow: hidden;
   zoom: 1;
+  color: #969696 !important;
 }
 
 .mediabody h4 {
@@ -408,4 +414,90 @@ footer li a:hover {
   width: 100%!important;
   height: 491px!important;
   padding-top: 5px!important;
+}
+
+#members-list {
+  .col-md-3 {
+    display: none;
+  }
+
+  button {
+    outline: 0 !important;
+  }
+
+  &.all {
+    button.all {
+      color: #fff;
+      background-color: #d9534f;
+      border-color: #d43f3a;
+    }
+    .col-md-3 {
+      display: block !important;
+    }
+  }
+
+  &.mladina {
+    button.mladina {
+      color: #fff;
+      background-color: #d9534f;
+      border-color: #d43f3a;
+    }
+    .col-md-3.mladina {
+      display: block !important;
+    }
+  }
+
+  &.clani {
+    button.clani {
+      color: #fff;
+      background-color: #d9534f;
+      border-color: #d43f3a;
+    }
+    .col-md-3.clani {
+      display: block !important;
+    }
+  }
+
+  &.clanice {
+    button.clanice {
+      color: #fff;
+      background-color: #d9534f;
+      border-color: #d43f3a;
+    }
+    .col-md-3.clanice {
+      display: block !important;
+    }
+  }
+
+  &.veterani {
+    button.veterani {
+      color: #fff;
+      background-color: #d9534f;
+      border-color: #d43f3a;
+    }
+    .col-md-3.veterani {
+      display: block !important;
+    }
+  }
+}
+
+.news-table {
+  a {
+    color: #525252 !important;
+
+    &:hover {
+      color: #151515 !important;
+    }
+  }
+
+  tr:first-child td {
+    border-top: none !important;
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-top: 20px;
+  }
 }

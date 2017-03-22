@@ -8,8 +8,8 @@
                 <h1>NOVICE</h1>
             </div>
 
-            <table class="table table-striped table-hover">
-            @foreach($news as $n)
+            <table class="table table-striped table-hover news-table">
+            @foreach($news as $i => $n)
 
                     <tr>
                         <td>
@@ -20,8 +20,14 @@
                                          class="img-responsive img-rounded"/>
                                 </div>
                                 <div class="col-md-9 col-lg-10">
-                                    <div style="font-size:17px;font-weight: 500">{{ $n->title }}</div>
-                                    <p>{{ $n->abstract }}</p>
+                                    <div class="title">{{ $n->title }}</div>
+
+                                    <p class="text-justify">{{ $n->abstract }}</p>
+
+                                    <div class="text-right">
+                                        {{ $n->created_at->format('d.m.Y \o\b H:i') }} <span class="fa fa-calendar"></span><br />
+                                        Mitja Pust <span class="fa fa-user-circle-o"></span>
+                                    </div>
                                 </div>
                             </div>
                             </a>

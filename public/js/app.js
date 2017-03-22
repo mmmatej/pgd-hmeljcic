@@ -93,9 +93,16 @@ var ifBreakpoint = function ifBreakpoint() {
     }
 };
 
+var initMembers = function initMembers() {
+    $('#members-filters').find('button').click(function () {
+        var group = $(this).data('group');
+        $('#members-list').removeClass().addClass('row').addClass(group);
+    });
+};
+
 $(window).resize(ifBreakpoint);
 $(function () {
-    ifBreakpoint();
+    ifBreakpoint();initMembers();
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 

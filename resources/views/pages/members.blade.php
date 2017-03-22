@@ -27,14 +27,14 @@
                 {{--<dd>11.2 km</dd>--}}
             {{--</dl>--}}
 
-            <div class="row">
+            <div class="row all" id="members-list">
                 <div id="members-filters" class="col-md-12" style="margin-top:30px;margin-bottom:40px">
                     <b>Filtriraj: </b>
-                    <button data-group=""         class="btn btn-danger">Vsi člani</button>
-                    <button data-group="mladina"  class="btn btn-default">Mladina</button>
-                    <button data-group="clani"    class="btn btn-default">Člani</button>
-                    <button data-group="clanice"  class="btn btn-default">Članice</button>
-                    <button data-group="veterani" class="btn btn-default">Veterani</button>
+                    <button data-group="all"      class="btn btn-default all">Vsi člani</button>
+                    <button data-group="mladina"  class="btn btn-default mladina">Mladina</button>
+                    <button data-group="clani"    class="btn btn-default clani">Člani</button>
+                    <button data-group="clanice"  class="btn btn-default clanice">Članice</button>
+                    <button data-group="veterani" class="btn btn-default veterani">Veterani</button>
                 </div>
                 @foreach($members as $i => $member)
                     <div class="col-md-3 text-center {{ str_slug($member->group) }}">
