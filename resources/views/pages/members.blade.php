@@ -28,21 +28,21 @@
             {{--</dl>--}}
 
             <div class="row">
-                <div class="col-md-12" style="margin-top:30px;margin-bottom:40px">
+                <div id="members-filters" class="col-md-12" style="margin-top:30px;margin-bottom:40px">
                     <b>Filtriraj: </b>
-                    <button class="btn btn-danger">Vsi člani</button>
-                    <button class="btn btn-default">Mladina</button>
-                    <button class="btn btn-default">Člani</button>
-                    <button class="btn btn-default">Članice</button>
-                    <button class="btn btn-default">Veterani</button>
+                    <button data-group=""         class="btn btn-danger">Vsi člani</button>
+                    <button data-group="mladina"  class="btn btn-default">Mladina</button>
+                    <button data-group="clani"    class="btn btn-default">Člani</button>
+                    <button data-group="clanice"  class="btn btn-default">Članice</button>
+                    <button data-group="veterani" class="btn btn-default">Veterani</button>
                 </div>
                 @foreach($members as $i => $member)
-                    <div class="col-md-3 text-center">
+                    <div class="col-md-3 text-center {{ str_slug($member->group) }}">
                         <img src="http://lorempixel.com/300/300/people/?i={{$i}}" alt=""
                              class="img-responsive img-rounded">
                         <dl>
-                            <dt>Mitja Pust</dt>
-                            <dd>Veterani</dd>
+                            <dt>{{ $member->name }}</dt>
+                            <dd>{{ $member->group }}</dd>
                         </dl>
                     </div>
                 @endforeach

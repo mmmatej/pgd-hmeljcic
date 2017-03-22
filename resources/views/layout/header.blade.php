@@ -31,11 +31,32 @@
                 </li>
                 <li class="{{ $menu->activeMenu('clani') }}"><a href="/clani">ČLANI</a></li>
                 <li class="{{ $menu->activeMenu('kontakt') }}"><a href="/kontakt">KONTAKT</a></li>
-                <li class="hidden-xs hidden-md">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false"><span class="btn btn-danger"><i class="glyphicon glyphicon-search"
-                                                                             aria-hidden="true"></i></span></a></li>
+                <li id="tax">
+                    {{--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tax-modal">Small modal</button>--}}
+
+                    <a href="#" data-toggle="modal" data-target="#tax-modal"><i class="glyphicon glyphicon-heart text-danger"></i> DARUJ DEL DOHODNINE</a>
+                    <a href="#" data-toggle="modal" data-target="#tax-modal" class="jump">
+                        <span class="btn btn-danger">
+                            {{--<i class="glyphicon glyphicon-search" aria-hidden="true"></i>--}}
+                            <i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+                        </span>
+                        <div class="tooltip bottom" style="width:162px;margin-left:-60px">
+                            <div class="tooltip-arrow"></div>
+                            <div class="tooltip-inner"> DARUJ DEL DOHODNINE</div>
+                        </div>
+                    </a>
+                </li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
 </nav>
+
+
+<!-- Modal -->
+<div class="modal fade" id="tax-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <script type='text/javascript' src='http://gradnik.dobrodelen.si/scripts/widget.js'></script><script type='text/javascript'>addWidget(500, '32aab3860a3e0c597d6fc97241eda8b8');</script>
+        </div>
+    </div>
+</div>

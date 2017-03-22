@@ -86,6 +86,11 @@ body {
 
   a {
     color: #FFF;
+    outline: 0!important;
+
+    &:focus {
+      outline: 0 !important;
+    }
   }
 }
 
@@ -281,6 +286,17 @@ footer li a:hover {
   text-shadow: none !important;
 }
 
+#tax {
+  a {
+    &:first-child {
+      display: none;
+    }
+    &:nth-child(2) {
+      display: block;
+    }
+  }
+}
+
 @media (max-width: 767px) {
   .navbar-brand {
     margin: 15px;
@@ -305,8 +321,91 @@ footer li a:hover {
   #news ul li:before {
     height: 550px;
   }
+
+  #tax {
+    a {
+      &:first-child {
+        display: block;
+      }
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
 }
 
 .help-block {
   color: #a94442;
+}
+
+@-webkit-keyframes jump {
+  0%{
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  20%{
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  45%{
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  50%{
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  55%{
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+  60%{
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100%{
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes jump {
+  0%{
+    transform: translateY(0);
+  }
+  20%{
+    transform: translateY(0);
+  }
+  45%{
+    transform: translateY(-30px);
+  }
+  50%{
+    transform: translateY(0);
+  }
+  55%{
+    transform: translateY(-15px);
+  }
+  60%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+.jump {
+  -webkit-animation: jump 3s ease 0s infinite normal ;
+  animation: jump 3s ease 0s infinite normal ;
+
+  &:hover {
+    .tooltip {
+      opacity: 1;
+    }
+  }
+}
+
+#_widget_if {
+  width: 100%!important;
+  height: 491px!important;
+  padding-top: 5px!important;
 }

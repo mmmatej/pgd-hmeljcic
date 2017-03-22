@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Pages;
 
 use App\Http\Controllers\Controller;
 use App\Mail\ContactEmail;
+use App\Member;
 use App\News;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -71,23 +72,7 @@ class PagesController extends Controller
     public function getMembers()
     {
         $data = [
-            'members' => [
-                [],
-                [],
-                [],
-                [],
-                [],
-                [],
-                [],
-                [],
-                [],
-                [],
-                [],
-                [],
-                [],
-                [],
-                [],
-            ]
+            'members' => Member::all()
         ];
 
         return view('pages.members', $data);

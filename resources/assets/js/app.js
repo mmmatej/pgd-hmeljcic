@@ -26,3 +26,4 @@ var ifBreakpoint = function () {
 
 $(window).resize(ifBreakpoint);
 $(function(){ifBreakpoint();});
+
