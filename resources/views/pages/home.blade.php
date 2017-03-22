@@ -13,12 +13,12 @@
         <!--</li>-->
         <!--</ul>-->
         <ul>
-            <li style="background-image: url('https://scontent-fra3-1.xx.fbcdn.net/v/t35.0-12/15556408_10211281656306715_2023156116_o.jpg?oh=b3b0839eac288d9eaa535f74b0ca138e&oe=58D44C60');">
-                <span>16. julij 2016</span>
-                <h1>DRŽAVNI PRVAKI 2016!!!</h1>
-                <p>Verjetno že veste za veselo novico, katera bo za nas prišla šele čez nekaj časa.</p>
+            <li style="background-image: url('{{ $news->getCoverImageUrl() }}');">
+                <span>{{ $news->getTranslatedDate() }}</span>
+                <h1 style="text-transform:uppercase">{{ $news->title }}</h1>
+                <p>{{ $news->cover_text }}</p>
 
-                <button class="btn btn-danger">PREBERI VEČ</button>
+                <a href="{{ $news->getUrl() }}"><button class="btn btn-danger">PREBERI VEČ</button></a>
             </li>
         </ul>
     </section>
@@ -38,44 +38,45 @@
     </section>
 
     <div class="container" id="groups">
-        <div class="col-sm-3 col-xs-12 media">
+        <a href="/clani">
+            <div class="col-sm-3 col-xs-12 media">
             <span class="medialeft">
                 <span class="glyphicon glyphicon-fire"></span>
             </span>
-            <div class="mediabody">
-                <h4>Operativa</h4>
-                <p>Preberite si več o operativnem delu</p>
+                <div class="mediabody">
+                    <h4>Operativa</h4>
+                    <p>Preberite si več o operativnem delu</p>
+                </div>
             </div>
-        </div>
-        <div class="col-sm-3 col-xs-12 media">
+            <div class="col-sm-3 col-xs-12 media">
             <span class="medialeft">
                 <span class="glyphicon glyphicon-fire"></span>
             </span>
-            <div class="mediabody">
-                <h4>Članice</h4>
-                <p>Preberite si več o članicah PGD Hmeljčič</p>
+                <div class="mediabody">
+                    <h4>Članice</h4>
+                    <p>Preberite si več o članicah PGD Hmeljčič</p>
+                </div>
             </div>
-        </div>
-        <div class="col-sm-3 col-xs-12 media">
+            <div class="col-sm-3 col-xs-12 media">
             <span class="medialeft">
                 <span class="glyphicon glyphicon-fire"></span>
             </span>
-            <div class="mediabody">
-                <h4>Člani</h4>
-                <p>Preberite si več o članih PGD Hmeljčič</p>
+                <div class="mediabody">
+                    <h4>Člani</h4>
+                    <p>Preberite si več o članih PGD Hmeljčič</p>
+                </div>
             </div>
-        </div>
-        <div class="col-sm-3 col-xs-12 media">
+            <div class="col-sm-3 col-xs-12 media">
             <span class="medialeft">
                 <span class="glyphicon glyphicon-fire"></span>
             </span>
-            <div class="mediabody">
-                <h4>Veterani</h4>
-                <p>Preberite si več o veteranih PGD Hmeljčič</p>
+                <div class="mediabody">
+                    <h4>Veterani</h4>
+                    <p>Preberite si več o veteranih PGD Hmeljčič</p>
+                </div>
             </div>
-        </div>
+        </a>
     </div>
 
-    <section style="height: 2000px;"></section>
 
 @endsection

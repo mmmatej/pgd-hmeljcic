@@ -25,8 +25,8 @@
                                     <p class="text-justify">{{ $n->abstract }}</p>
 
                                     <div class="text-right">
-                                        {{ $n->created_at->format('d.m.Y \o\b H:i') }} <span class="fa fa-calendar"></span><br />
-                                        Mitja Pust <span class="fa fa-user-circle-o"></span>
+                                        {{ $n->getTranslatedDate() }} <span class="fa fa-calendar"></span><br />
+                                        {{ $n->author }} <span class="fa fa-user-circle-o"></span>
                                     </div>
                                 </div>
                             </div>

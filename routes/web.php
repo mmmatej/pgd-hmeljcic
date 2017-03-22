@@ -11,10 +11,23 @@
 |
 */
 
-Route::get('/', 'Pages\PagesController@getIndex');
-Route::get('o-drustvu', 'Pages\PagesController@getAboutUs');
-Route::get('novice', 'Pages\PagesController@getNews');
-Route::get('novice/{slug}', 'Pages\PagesController@getNewsDetails');
-Route::get('clani', 'Pages\PagesController@getMembers');
-Route::get('kontakt', 'Pages\PagesController@getContact');
-Route::post('kontakt', 'Pages\PagesController@postContact');
+$this->get('/', 'Pages\PagesController@getIndex');
+$this->get('o-drustvu', 'Pages\PagesController@getAboutUs');
+$this->get('novice', 'Pages\PagesController@getNews');
+$this->get('novice/{slug}', 'Pages\PagesController@getNewsDetails');
+$this->get('clani', 'Pages\PagesController@getMembers');
+$this->get('kontakt', 'Pages\PagesController@getContact');
+$this->post('kontakt', 'Pages\PagesController@postContact');
+
+// Authentication Routes...
+$this->get('prijava', 'Auth\LoginController@showLoginForm')->name('login');
+$this->post('prijava', 'Auth\LoginController@login');
+$this->get('odjava', 'Auth\LoginController@logout')->name('logout');
+
+$this->group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
+    $this->resource('novice', 'Admin\NewsController', ['except' => 'show']);
+    $this->resource('novice.slike', 'Admin\NewsImagesController', ['only' => ['store', 'destroy']]);
+    $this->resource('clani',  'Admin\MembersController', ['except' => 'show']);
+});
+
+

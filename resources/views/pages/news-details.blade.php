@@ -16,19 +16,28 @@
 
 
                     <div class="text-justify">
-                        @if($news->getCoverImage())
+                        @if($news->cover_style == 'top')
+                            <p><b>{!! $news->abstract !!}</b></p>
+                            <img src="{{ $news->getCoverImageUrl() }}"
+                                 alt="{{ $news->getCoverImage()->description }}"
+                                 class="img-responsive img-rounded"
+                                 style="margin:0 40px 40px 0"
+                            >
+                        @else
                             <img src="{{ $news->getCoverImageUrl() }}"
                                  alt="{{ $news->getCoverImage()->description }}"
                                  class="img-responsive img-rounded pull-left"
+                                 width="300px"
                                  style="margin:0 40px 40px 0"
                             >
+                            <p><b>{!! $news->abstract !!}</b></p>
                         @endif
 
-                        <p><b>{!! $news->abstract !!}</b></p>
                         {!! $news->content !!}
                     </div>
 
                     @if($news->images->count())
+                        <div class="clearfix"></div>
                         <div class="page-header">
                             <h2>Galerija</h2>
                         </div>
@@ -36,8 +45,10 @@
                         <div class="row">
                             @foreach($news->images as $image)
                                 <div class="col-md-2 text-center">
-                                    <img src="{{ $image->getUrl() }}" alt="{{ $image->description }}"
+                                    <a href="{{ $image->getUrl() }}"> {{--TODO: open in popup--}}
+                                        <img src="{{ $image->getUrl() }}" alt="{{ $image->description }}"
                                          class="img-responsive img-rounded">
+                                    </a>
                                 </div>
                             @endforeach
                         </div>

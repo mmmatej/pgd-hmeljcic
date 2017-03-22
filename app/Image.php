@@ -11,7 +11,7 @@ class Image extends Model
 
     public function getUrl()
     {
-        return "http://lorempixel.com/300/300/people/" . $this->id;
-        return url($this->path);
+//        return "http://lorempixel.com/300/300/people/" . $this->id;
+        return url("uploads/" . $this->path);
     }
 }

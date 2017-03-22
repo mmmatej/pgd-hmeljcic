@@ -19,7 +19,7 @@ class PagesController extends Controller
     public function getIndex()
     {
         $data = [
-            'news' => []
+            'news' => News::getCover()
         ];
 
         return view('pages.home', $data);
@@ -40,7 +40,7 @@ class PagesController extends Controller
      */
     public function getNews()
     {
-        $news = News::paginate(20);
+        $news = News::orderBy('id', 'desc')->paginate(20);
 
         return view('pages.news', ['news' => $news]);
     }

@@ -38,8 +38,8 @@
                 </div>
                 @foreach($members as $i => $member)
                     <div class="col-md-3 text-center {{ str_slug($member->group) }}">
-                        <img src="http://lorempixel.com/300/300/people/?i={{$i}}" alt=""
-                             class="img-responsive img-rounded">
+                        <div class="img-rounded" style="height:180px;background:url({{ $member->getImageUrl() }});background-size:cover"></div>
+
                         <dl>
                             <dt>{{ $member->name }}</dt>
                             <dd>{{ $member->group }}</dd>

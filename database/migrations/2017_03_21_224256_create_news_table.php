@@ -19,9 +19,15 @@ class CreateNewsTable extends Migration
             $table->string('title');
             $table->string('abstract');
             $table->text('content');
+            $table->text('author');
+
+            $table->boolean('is_cover_news')->default(false);
+            $table->string('cover_text')->nullable();
+            $table->string('cover_style')->default('top');
 
             $table->string('slug')->unique();
             $table->timestamps();
+            $table->boolean('published')->default(false);
             $table->softDeletes();
         });
     }
