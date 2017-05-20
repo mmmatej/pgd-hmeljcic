@@ -18,16 +18,27 @@
                 <li class="{{ $menu->activeMenu('/') }}"><a href="/">DOMOV</a></li>
                 <li class="{{ $menu->activeMenu('novice') }}"><a href="/novice">NOVICE</a></li>
                 <li class="{{ $menu->activeMenu('o-drustvu') }}"><a href="/o-drustvu">O DRUŠTVU</a></li>
-                <li class="{{ $menu->activeMenu('clani') }}"><a href="/clani">ČLANI</a></li>
-                <li class="dropdown {{ $menu->activeMenu('vozila-in-tehnika') }}">
+                {{--<li class="{{ $menu->activeMenu('clani') }}"><a href="/clani">ČLANI</a></li>--}}
+                {{--<li class="dropdown {{ $menu->activeMenu('vozila-in-tehnika') }}">--}}
+                    {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"--}}
+                       {{--aria-expanded="false">VOZILA IN TEHNIKA <span class="caret"></span></a>--}}
+                    {{--<ul class="dropdown-menu dropdown-together">--}}
+                        {{--<li><a href="/vozila-in-tehnika/gasilsko-vozilo-s-cisterno-gvc-16-25">Gasilsko vozilo s cisterno GVC 16/25</a></li>--}}
+                        {{--<li><a href="/vozila-in-tehnika/hitro-tehnicno-resevalno-vozilo-htrv-1">Hitro tehnično reševalno vozilo HTRV-1</a></li>--}}
+                        {{--<li><a href="#">Poveljniško vozilo PV 1</a></li>--}}
+                        {{--<li><a href="#">Hitro tehnično reševalno vozilo HTV</a></li>--}}
+                        {{--<li><a href="#">Priklopnik za prevoz vodne zavese</a></li>--}}
+                    {{--</ul>--}}
+                {{--</li>--}}
+                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">VOZILA IN TEHNIKA <span class="caret"></span></a>
+                       aria-expanded="false">POVEZAVE <span class="caret"></span></a>
                     <ul class="dropdown-menu dropdown-together">
-                        <li><a href="/vozila-in-tehnika/gasilsko-vozilo-s-cisterno-gvc-16-25">Gasilsko vozilo s cisterno GVC 16/25</a></li>
-                        <li><a href="/vozila-in-tehnika/hitro-tehnicno-resevalno-vozilo-htrv-1">Hitro tehnično reševalno vozilo HTRV-1</a></li>
-                        <li><a href="#">Poveljniško vozilo PV 1</a></li>
-                        <li><a href="#">Hitro tehnično reševalno vozilo HTV</a></li>
-                        <li><a href="#">Priklopnik za prevoz vodne zavese</a></li>
+                        <li><a href="http://www.gasilec.net/">Gasilska Zveza Slovenije</a></li>
+                        <li><a href="http://www.gasilci.org/">Gasilci.Org</a></li>
+                        <li><a href="http://spin.sos112.si/">SPIN</a></li>
+                        <li><a href="https://apl.gasilec.net/Vulkan">Vulkan</a></li>
+                        <li><a href="https://www.mirnapec.si/">Občina Mirna Peč</a></li>
                     </ul>
                 </li>
                 <li class="{{ $menu->activeMenu('kontakt') }}"><a href="/kontakt">KONTAKT</a></li>

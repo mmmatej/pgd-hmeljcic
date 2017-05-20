@@ -8,8 +8,8 @@
 
             <ul class="list-inline pull-right">
                 <li><a href="https://www.facebook.com/PGD-Hmeljčič-1481928608779856" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                {{--<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>--}}
+                <li><a href="/kontakt"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
             </ul>
         </div>
     </div>

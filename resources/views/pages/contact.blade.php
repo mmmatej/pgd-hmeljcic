@@ -9,9 +9,9 @@
             </div>
 
             <div class="row">
-                <div class="col-md-12 text-justify" style="margin-bottom:40px">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores consequuntur delectus dolores eaque eos eveniet fugiat iure perspiciatis, quaerat quam quasi quidem quisquam repellendus, saepe sit unde vitae voluptates?</p>
-                </div>
+                {{--<div class="col-md-12 text-justify" style="margin-bottom:40px">--}}
+                    {{--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores consequuntur delectus dolores eaque eos eveniet fugiat iure perspiciatis, quaerat quam quasi quidem quisquam repellendus, saepe sit unde vitae voluptates?</p>--}}
+                {{--</div>--}}
 
                 <div class="col-md-4">
                     <dl>

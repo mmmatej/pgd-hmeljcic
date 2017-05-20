@@ -1,7 +1,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 170%;
   color: #525252;
   font-weight: 400;
   background-color: #f5f5f5;
@@ -91,6 +91,23 @@ body div.white-bg {
   .navbar-nav {
     margin-top: 7px;
     margin-bottom: -7px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  body #main-section {
+    margin: 180px auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .sticky-div {
+    height: 900px;
+  }
+
+  .sticky {
+    position: sticky;
+    top: 130px;
   }
 }
 
@@ -289,6 +306,10 @@ footer li a:hover {
 }
 
 @media (max-width: 767px) {
+  body #main-section {
+    margin: 60px auto;
+  }
+
   .navbar-brand {
     margin: 15px;
   }
