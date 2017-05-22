@@ -67,7 +67,7 @@
 <div class="modal fade" id="tax-modal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <iframe src="https://www.pgd-hmeljcic.si/dobrodelen" height="580px" width="500px" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" id="_widget_if"></iframe>
+            <iframe src="http://pgd-hmeljcic.dev/dobrodelen" height="607px" width="500px" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" id="_widget_if"></iframe>
         </div>
     </div>
 </div>

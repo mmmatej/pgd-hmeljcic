@@ -132,8 +132,35 @@ class PagesController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function getDobrodelen(Request $request)
+    public function getCharitable(Request $request)
     {
-        return response()->redirectTo('http://gradnik.dobrodelen.si/sl/?hash_id=32aab3860a3e0c597d6fc97241eda8b8&host=www.pgd-hmeljcic.si');
+        return view('pages.charitable');
+    }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function postCharitable(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required',
+            'address' => 'required',
+            'post' => 'required',
+            'tax' => 'required',
+            'office' => 'required|not_in:0',
+            'percent' => 'required'
+        ], [
+            'name.required' => "Polje 'Ime oz.naziv upravičenca' je obvezno.",
+            'address.required' => "Polje 'Naselje, ulica, hišna številka' je obvezno.",
+            'post.required' => "Polje 'Poštna številka, ime pošte' je obvezno.",
+            'tax.required' => "Polje 'Davčna številka' je obvezno.",
+            'office.not_in' => "Polje 'Pristojni finančni urad, izpostava' je obvezno.",
+            'percent.required' => "Polje 'Odstotek' je obvezno.",
+        ]);
+
+        $pdf = app('dompdf.wrapper');
+        $pdf->loadView('pdf.charitable', $request->all());
+        return $pdf->stream('dobrodelen.pdf');
     }
 }
