@@ -16,22 +16,22 @@
                 <div class="col-md-4">
                     <dl>
                         <dt>PGD Hmeljčič</dt>
-                        <dd>Hmeljčič 112</dd>
+                        <dd>Hmeljčič 7</dd>
                         <dd>8216 Mirna Peč</dd>
                     </dl>
 
                     <dl>
                         <dt>Tel</dt>
-                        <dd>041/123 123</dd>
-                        <dd>07/30 78 123</dd>
+                        <dd>031 357 343 (Irena Pust)</dd>
+                        <dd>041 861 562 (Mitja Pust)</dd>
                     </dl>
 
                     <dl>
                         <dt>Email</dt>
-                        <dd><a href="mailto:info@pgd-hmeljcic.si">info@pgd-hmeljcic.si</a></dd>
+                        <dd><a href="mailto:pust.mitja@gmail.com">pust.mitja@gmail.com</a></dd>
                     </dl>
 
-                    <img src="https://i.stack.imgur.com/D167A.png" alt="map" class="img-responsive">
+                    <img src="https://maps.googleapis.com/maps/api/staticmap?center=Hmeljčič+7&zoom=13&scale=1&size=600x300&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:%7CHmeljčič+7" alt="map" class="img-responsive">
                 </div>
                 <div class="col-md-8 text-justify">
 

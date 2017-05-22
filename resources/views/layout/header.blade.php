@@ -34,11 +34,12 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">POVEZAVE <span class="caret"></span></a>
                     <ul class="dropdown-menu dropdown-together">
-                        <li><a href="http://www.gasilec.net/">Gasilska Zveza Slovenije</a></li>
-                        <li><a href="http://www.gasilci.org/">Gasilci.Org</a></li>
-                        <li><a href="http://spin.sos112.si/">SPIN</a></li>
-                        <li><a href="https://apl.gasilec.net/Vulkan">Vulkan</a></li>
-                        <li><a href="https://www.mirnapec.si/">Občina Mirna Peč</a></li>
+                        <li><a href="http://www.gasilec.net/" target="_blank">Gasilska Zveza Slovenije</a></li>
+                        <li><a href="http://www.gasilci.org/" target="_blank">Gasilci.Org</a></li>
+                        <li><a href="http://spin.sos112.si/" target="_blank">SPIN</a></li>
+                        <li><a href="https://apl.gasilec.net/Vulkan" target="_blank">Vulkan</a></li>
+                        <li><a href="https://www.mirnapec.si/" target="_blank">Občina Mirna Peč</a></li>
+                        <li><a href="https://www.facebook.com/PGD-Hmeljčič-1481928608779856" target="_blank">PGD Hmeljčič Facebook stran</a></li>
                     </ul>
                 </li>
                 <li class="{{ $menu->activeMenu('kontakt') }}"><a href="/kontakt">KONTAKT</a></li>
