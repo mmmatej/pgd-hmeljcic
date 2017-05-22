@@ -38,7 +38,7 @@
     </section>
 
     <div class="container" id="groups">
-        <a href="/clani">
+        {{--<a href="/clani">--}}
             <div class="col-sm-3 col-xs-12 media">
             <span class="medialeft">
                 <span class="glyphicon glyphicon-fire"></span>
@@ -75,7 +75,7 @@
                     <p>Preberite si več o veteranih PGD Hmeljčič</p>
                 </div>
             </div>
-        </a>
+        {{--</a>--}}
     </div>
 
 
