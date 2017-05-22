@@ -67,7 +67,7 @@
 <div class="modal fade" id="tax-modal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <script type='text/javascript' src='http://gradnik.dobrodelen.si/scripts/widget.js'></script><script type='text/javascript'>addWidget(500, '32aab3860a3e0c597d6fc97241eda8b8');</script>
+            <script type='text/javascript' src='/js/widget.js'></script><script type='text/javascript'>addWidget(500, '32aab3860a3e0c597d6fc97241eda8b8');</script>
         </div>
     </div>
 </div>
