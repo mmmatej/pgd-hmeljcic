@@ -67,7 +67,7 @@
 <div class="modal fade" id="tax-modal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <script type='text/javascript' src='/js/widget.js'></script><script type='text/javascript'>addWidget(500, '32aab3860a3e0c597d6fc97241eda8b8');</script>
+            <iframe src="http://pgd-hmeljcic.dev/dobrodelen" height="580px" width="500px" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" id="_widget_if"></iframe>
         </div>
     </div>
 </div>

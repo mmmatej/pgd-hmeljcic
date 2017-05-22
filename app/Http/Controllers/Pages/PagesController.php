@@ -127,4 +127,13 @@ class PagesController extends Controller
 
         return view('pages.contact', ['sent' => true]);
     }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function getDobrodelen(Request $request)
+    {
+        return response()->redirectTo('http://gradnik.dobrodelen.si/sl/?hash_id=32aab3860a3e0c597d6fc97241eda8b8&host=www.pgd-hmeljcic.si');
+    }
 }

@@ -19,6 +19,7 @@ $this->get('novice/{slug}', 'Pages\PagesController@getNewsDetails');
 $this->get('clani', 'Pages\PagesController@getMembers');
 $this->get('kontakt', 'Pages\PagesController@getContact');
 $this->post('kontakt', 'Pages\PagesController@postContact');
+$this->get('dobrodelen', 'Pages\PagesController@getDobrodelen');
 
 // Authentication Routes...
 $this->get('prijava', 'Auth\LoginController@showLoginForm')->name('login');
