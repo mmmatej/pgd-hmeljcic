@@ -304,7 +304,17 @@ footer li a:hover {
     }
   }
 }
-
+@media (max-width: 1600px) {
+  #news {
+    height: 440px;
+  }
+  #news ul li {
+    padding: 150px 0 0 0;
+  }
+  #news ul li:before {
+    height: 440px;
+  }
+}
 @media (max-width: 767px) {
   .navbar-brand {
     margin: 15px;
